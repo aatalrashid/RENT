@@ -1,5 +1,3 @@
-#this is a rent system::
-
 class Rent:
     def __init__(self, House_No, Occupant_Name, Date_of_payment, Amount_payed):
 
@@ -8,6 +6,7 @@ class Rent:
         self.Date_of_payment = Date_of_payment
         self.Amount_payed = Amount_payed
 
+    def print_receipt(self):
         print()
         print("RECEIPT:")
         print('On {2} {1} paid {3}shs for house number {0}.'
@@ -20,6 +19,7 @@ class Rent:
         print()
         print("       Thanks for your cooperation. MGT")
 
+
 c = Rent(
          int(input("Enter the House_No: ")),
          input("Enter the Occupant_Name: "),
@@ -27,6 +27,4 @@ c = Rent(
          input("Enter the Amount_Payed: ")
         )
 
-
-
-
+c.print_receipt()
